@@ -2,15 +2,22 @@
   {
     "meta": {
       "type": "EiffelSourceChangeSubmittedEvent",
-      "version": "1.0.0",
+      "version": "3.0.0",
       "time": 1000,
-      "id": "aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeee0",
+      "id": "aaaaaaaa-bbbb-5ccc-8ddd-eeeeeeeeeee0",
       "source": {
         "domainId": "example.domain"
       }
     },
     "data": {
-      "placeholder": "The syntax of this event has not yet been defined."
+      "hgIdentifier": {
+        "commitId": "f7744f53cf93",
+        "repoUri": "https://myrepo.com/hg"
+      },
+      "submitter": {
+        "name": "Jane Doe",
+        "email": "jane.doe@company.com"
+      }
     },
     "links": [
     ]
@@ -18,331 +25,444 @@
   {
     "meta": {
       "type": "EiffelSourceChangeCreatedEvent",
-      "version": "1.0.0",
+      "version": "4.0.0",
       "time": 101000,
-      "id": "aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeee1",
+      "id": "aaaaaaaa-bbbb-5ccc-8ddd-eeeeeeeeeee1",
       "source": {
         "domainId": "example.domain"
       }
     },
     "data": {
-      "placeholder": "The syntax of this event has not yet been defined."
+      "gitIdentifier": {
+        "commitId": "fd090b60a4aedc5161da9c035a49b14a319829b4",
+        "branch": "myBranch",
+        "repoName": "myPrivateRepo",
+        "repoUri": "https://github.com/johndoe/myPrivateRepo.git"
+      }
     },
     "links": [
       {
         "type": "BASE",
-        "target": "aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeee0"
+        "target": "aaaaaaaa-bbbb-5ccc-8ddd-eeeeeeeeeee0"
+      },
+      {
+        "type": "PARTIALLY_RESOLVED_ISSUE",
+        "target": "aaaaaaaa-bbbb-5ccc-8ddd-eeeeeeeeee17"
+      },
+      {
+        "type": "PARTIALLY_RESOLVED_ISSUE",
+        "target": "aaaaaaaa-bbbb-5ccc-8ddd-eeeeeeeeee18"
       }
     ]
   },
   {
     "meta": {
       "type": "EiffelSourceChangeCreatedEvent",
-      "version": "1.0.0",
+      "version": "4.0.0",
       "time": 102000,
-      "id": "aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeee2",
+      "id": "aaaaaaaa-bbbb-5ccc-8ddd-eeeeeeeeeee2",
       "source": {
         "domainId": "example.domain"
       }
     },
     "data": {
-      "placeholder": "The syntax of this event has not yet been defined."
+      "gitIdentifier": {
+        "commitId": "fd090b60a4aedc5161da9c035a49b14a319829b4",
+        "branch": "myBranch",
+        "repoName": "myPrivateRepo",
+        "repoUri": "https://github.com/johndoe/myPrivateRepo.git"
+      },
+      "author": {
+        "name": "John Doe",
+        "email": "john.doe@company.com",
+        "id": "johndoe",
+        "group": "Team Gophers"
+      }
     },
     "links": [
       {
         "type": "BASE",
-        "target": "aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeee0"
+        "target": "aaaaaaaa-bbbb-5ccc-8ddd-eeeeeeeeeee0"
       },
       {
         "type": "PREVIOUS_VERSION",
-        "target": "aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeee1"
+        "target": "aaaaaaaa-bbbb-5ccc-8ddd-eeeeeeeeeee1"
+      },
+      {
+        "type": "RESOLVED_ISSUE",
+        "target": "aaaaaaaa-bbbb-5ccc-8ddd-eeeeeeeeee17"
+      },
+      {
+        "type": "RESOLVED_ISSUE",
+        "target": "aaaaaaaa-bbbb-5ccc-8ddd-eeeeeeeeee18"
       }
     ]
   },
   {
     "meta": {
       "type": "EiffelSourceChangeSubmittedEvent",
-      "version": "1.0.0",
+      "version": "3.0.0",
       "time": 103000,
-      "id": "aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeee3",
+      "id": "aaaaaaaa-bbbb-5ccc-8ddd-eeeeeeeeeee3",
       "source": {
         "domainId": "example.domain"
       }
     },
     "data": {
-      "placeholder": "The syntax of this event has not yet been defined."
+      "hgIdentifier": {
+        "commitId": "f7744f53cf94",
+        "repoUri": "https://myrepo.com/hg"
+      },
+      "submitter": {
+        "name": "John Doe",
+        "email": "john.doe@company.com"
+      }
     },
     "links": [
       {
         "type": "CHANGE",
-        "target": "aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeee2"
+        "target": "aaaaaaaa-bbbb-5ccc-8ddd-eeeeeeeeeee2"
       },
       {
         "type": "PREVIOUS_VERSION",
-        "target": "aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeee0"
+        "target": "aaaaaaaa-bbbb-5ccc-8ddd-eeeeeeeeeee0"
       }
     ]
   },
   {
     "meta": {
       "type": "EiffelSourceChangeCreatedEvent",
-      "version": "1.0.0",
+      "version": "3.0.0",
       "time": 201000,
-      "id": "aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeee4",
+      "id": "aaaaaaaa-bbbb-5ccc-8ddd-eeeeeeeeeee4",
       "source": {
         "domainId": "example.domain"
       }
     },
     "data": {
-      "placeholder": "The syntax of this event has not yet been defined."
+      "svnIdentifier": {
+        "revision": 5,
+        "directory": "myBranch",
+        "repoUri": "https://mycompany.com/svn/myRepo"
+      },
+      "author": {
+        "id": "johndoe"
+      }
     },
     "links": [
       {
         "type": "BASE",
-        "target": "aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeee3"
+        "target": "aaaaaaaa-bbbb-5ccc-8ddd-eeeeeeeeeee3"
+      },
+      {
+        "type": "RESOLVED_ISSUE",
+        "target": "aaaaaaaa-bbbb-5ccc-8ddd-eeeeeeeeee19"
       }
     ]
   },
   {
-    "meta": {    
+    "meta": {
       "type": "EiffelSourceChangeSubmittedEvent",
-      "version": "1.0.0",
+      "version": "3.0.0",
       "time": 202000,
-      "id": "aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeee5",
+      "id": "aaaaaaaa-bbbb-5ccc-8ddd-eeeeeeeeeee5",
       "source": {
         "domainId": "example.domain"
       }
     },
     "data": {
-      "placeholder": "The syntax of this event has not yet been defined."
+      "hgIdentifier": {
+        "commitId": "f7744f53cf95",
+        "repoUri": "https://myrepo.com/hg"
+      },
+      "submitter": {
+        "name": "Jane Doe",
+        "email": "jane.doe@company.com"
+      }
     },
     "links": [
       {
         "type": "CHANGE",
-        "target": "aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeee4"
+        "target": "aaaaaaaa-bbbb-5ccc-8ddd-eeeeeeeeeee4"
       },
       {
         "type": "PREVIOUS_VERSION",
-        "target": "aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeee3"
+        "target": "aaaaaaaa-bbbb-5ccc-8ddd-eeeeeeeeeee3"
       }
     ]
   },
   {
     "meta": {
       "type": "EiffelCompositionDefinedEvent",
-      "version": "1.0.0",
+      "version": "3.0.0",
       "time": 2000,
-      "id": "aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeee6",
+      "id": "aaaaaaaa-bbbb-5ccc-8ddd-eeeeeeeeeee6",
       "source": {
         "domainId": "example.domain"
       }
     },
     "data": {
-      "placeholder": "The syntax of this event has not yet been defined."
+      "name": "My composition"
     },
     "links": [
       {
         "type": "ELEMENT",
-        "target": "aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeee0"
+        "target": "aaaaaaaa-bbbb-5ccc-8ddd-eeeeeeeeeee0"
       }
     ]
   },
   {
     "meta": {
       "type": "EiffelCompositionDefinedEvent",
-      "version": "1.0.0",
+      "version": "3.0.0",
       "time": 104000,
-      "id": "aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeee7",
+      "id": "aaaaaaaa-bbbb-5ccc-8ddd-eeeeeeeeeee7",
       "source": {
         "domainId": "example.domain"
       }
     },
     "data": {
-      "placeholder": "The syntax of this event has not yet been defined."
+      "name": "My composition",
+      "version": "2.0"
     },
     "links": [
       {
         "type": "ELEMENT",
-        "target": "aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeee3"
+        "target": "aaaaaaaa-bbbb-5ccc-8ddd-eeeeeeeeeee3"
       },
       {
         "type": "PREVIOUS_VERSION",
-        "target": "aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeee6"
+        "target": "aaaaaaaa-bbbb-5ccc-8ddd-eeeeeeeeeee6"
       }
     ]
   },
   {
     "meta": {
       "type": "EiffelCompositionDefinedEvent",
-      "version": "1.0.0",
+      "version": "3.0.0",
       "time": 203000,
-      "id": "aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeee8",
+      "id": "aaaaaaaa-bbbb-5ccc-8ddd-eeeeeeeeeee8",
       "source": {
         "domainId": "example.domain"
       }
     },
     "data": {
-      "placeholder": "The syntax of this event has not yet been defined."
+      "name": "My composition",
+      "version": "3.0"
     },
     "links": [
       {
         "type": "ELEMENT",
-        "target": "aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeee5"
+        "target": "aaaaaaaa-bbbb-5ccc-8ddd-eeeeeeeeeee5"
       },
       {
         "type": "PREVIOUS_VERSION",
-        "target": "aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeee7"
+        "target": "aaaaaaaa-bbbb-5ccc-8ddd-eeeeeeeeeee7"
       }
     ]
   },
   {
     "meta": {
       "type": "EiffelArtifactCreatedEvent",
-      "version": "1.0.0",
+      "version": "3.0.0",
       "time": 3000,
-      "id": "aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeee9",
+      "id": "aaaaaaaa-bbbb-5ccc-8ddd-eeeeeeeeeee9",
       "source": {
         "domainId": "example.domain"
       }
     },
     "data": {
-      "gav": {
-        "groupId": "com.mycompany.myproduct",
-        "artifactId": "artifact-name",
-        "version": "1.0.0"
-      },
-      "fileInformation": [
-        {
-          "classifier": "",
-          "extension": "jar"
-        }
-      ],
+      "identity": "pkg:maven/com.mycompany.myproduct/artifact-name@1.0.0",
       "buildCommand": "/my/build/command with arguments"
     },
     "links": [
       {
         "type": "COMPOSITION",
-        "target": "aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeee6"
+        "target": "aaaaaaaa-bbbb-5ccc-8ddd-eeeeeeeeeee6"
       }
     ]
   },
   {
     "meta": {
       "type": "EiffelArtifactCreatedEvent",
-      "version": "1.0.0",
+      "version": "3.0.0",
       "time": 204000,
-      "id": "aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeee10",
+      "id": "aaaaaaaa-bbbb-5ccc-8ddd-eeeeeeeeee10",
       "source": {
         "domainId": "example.domain"
       }
     },
     "data": {
-      "gav": {
-        "groupId": "com.mycompany.myproduct",
-        "artifactId": "artifact-name",
-        "version": "1.1.0"
-      },
-      "fileInformation": [
-        {
-          "classifier": "",
-          "extension": "jar"
-        }
-      ],
+      "identity": "pkg:maven/com.mycompany.myproduct/artifact-name@1.1.0",
       "buildCommand": "/my/build/command with arguments"
     },
     "links": [
       {
         "type": "COMPOSITION",
-        "target": "aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeee8"
+        "target": "aaaaaaaa-bbbb-5ccc-8ddd-eeeeeeeeeee8"
       }
     ]
   },
   {
     "meta": {
-      "type": "EiffelTestCaseStartedEvent",
-      "version": "1.0.0",
+      "type": "EiffelTestCaseTriggeredEvent",
+      "version": "3.0.0",
       "time": 4000,
-      "id": "aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeee11",
+      "id": "aaaaaaaa-bbbb-5ccc-8ddd-eeeeeeeeea11",
       "source": {
         "domainId": "example.domain"
       }
     },
     "data": {
-      "placeholder": "The syntax of this event has not yet been defined."
+      "testCase": {
+        "tracker": "My Test Management System",
+        "id": "TC-1234",
+        "uri": "http://tm.company.com/browse/TC-1234"
+      },
+      "executionType": "AUTOMATED"
     },
     "links": [
       {
         "type": "IUT",
-        "target": "aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeee9"
+        "target": "aaaaaaaa-bbbb-5ccc-8ddd-eeeeeeeeeee9"
       }
     ]
   },
   {
     "meta": {
       "type": "EiffelTestCaseStartedEvent",
-      "version": "1.0.0",
-      "time": 205000,
-      "id": "aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeee12",
+      "version": "3.0.0",
+      "time": 4001,
+      "id": "aaaaaaaa-bbbb-5ccc-8ddd-eeeeeeeeee11",
       "source": {
         "domainId": "example.domain"
       }
     },
     "data": {
-      "placeholder": "The syntax of this event has not yet been defined."
+      "executor": "My Test Framework"
+    },
+    "links": [
+      {
+        "type": "TEST_CASE_EXECUTION",
+        "target": "aaaaaaaa-bbbb-5ccc-8ddd-eeeeeeeeea11"
+      }
+    ]
+  },
+  {
+    "meta": {
+      "type": "EiffelTestCaseTriggeredEvent",
+      "version": "3.0.0",
+      "time": 205000,
+      "id": "aaaaaaaa-bbbb-5ccc-8ddd-eeeeeeeeea12",
+      "source": {
+        "domainId": "example.domain"
+      }
+    },
+    "data": {
+      "testCase": {
+        "tracker": "My Test Management System",
+        "id": "TC-1234",
+        "uri": "http://tm.company.com/browse/TC-1234"
+      },
+      "executionType": "AUTOMATED"
     },
     "links": [
       {
         "type": "IUT",
-        "target": "aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeee10"
+        "target": "aaaaaaaa-bbbb-5ccc-8ddd-eeeeeeeeee10"
+      }
+    ]
+  },
+  {
+    "meta": {
+      "type": "EiffelTestCaseStartedEvent",
+      "version": "3.0.0",
+      "time": 205001,
+      "id": "aaaaaaaa-bbbb-5ccc-8ddd-eeeeeeeeee12",
+      "source": {
+        "domainId": "example.domain"
+      }
+    },
+    "data": {
+      "executor": "My Test Framework"
+    },
+    "links": [
+      {
+        "type": "TEST_CASE_EXECUTION",
+        "target": "aaaaaaaa-bbbb-5ccc-8ddd-eeeeeeeeea12"
       }
     ]
   },
   {
     "meta": {
       "type": "EiffelTestCaseFinishedEvent",
-      "version": "1.0.0",
+      "version": "3.0.0",
       "time": 5000,
-      "id": "aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeee13",
+      "id": "aaaaaaaa-bbbb-5ccc-8ddd-eeeeeeeeee13",
       "source": {
         "domainId": "example.domain"
       }
     },
     "data": {
-      "placeholder": "The syntax of this event has not yet been defined."
+      "outcome": {
+        "verdict": "PASSED",
+        "conclusion": "SUCCESSFUL",
+        "description": "Logged 531 warnings."
+      },
+      "persistentLogs": [
+        {
+         "name": "firstLog",
+         "uri": "http://myHost.com/firstLog"
+        },
+        {
+         "name": "otherLog",
+         "uri": "isbn:0-486-27557-4"
+        }
+      ]
     },
     "links": [
       {
         "type": "TEST_CASE_EXECUTION",
-        "target": "aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeee11"
+        "target": "aaaaaaaa-bbbb-5ccc-8ddd-eeeeeeeeee11"
       }
     ]
   },
   {
     "meta": {
       "type": "EiffelTestCaseFinishedEvent",
-      "version": "1.0.0",
+      "version": "3.0.0",
       "time": 206000,
-      "id": "aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeee14",
+      "id": "aaaaaaaa-bbbb-5ccc-8ddd-eeeeeeeeee14",
       "source": {
         "domainId": "example.domain"
       }
     },
     "data": {
-      "placeholder": "The syntax of this event has not yet been defined."
+      "outcome": {
+        "verdict": "PASSED",
+        "conclusion": "SUCCESSFUL",
+        "description": "This went really well!",
+        "metrics": [
+          {
+            "name": "performance",
+            "value": 42
+          }
+        ]
+      }
     },
     "links": [
       {
         "type": "TEST_CASE_EXECUTION",
-        "target": "aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeee12"
+        "target": "aaaaaaaa-bbbb-5ccc-8ddd-eeeeeeeeee12"
       }
     ]
   },
   {
     "meta": {
       "type": "EiffelConfidenceLevelModifiedEvent",
-      "version": "1.0.0",
+      "version": "3.0.0",
       "time": 6000,
-      "id": "aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeee15",
+      "id": "aaaaaaaa-bbbb-5ccc-8ddd-eeeeeeeeee15",
       "source": {
         "domainId": "example.domain"
       }
@@ -354,16 +474,16 @@
     "links": [
       {
         "type": "SUBJECT",
-        "target": "aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeee9"
+        "target": "aaaaaaaa-bbbb-5ccc-8ddd-eeeeeeeeeee9"
       }
     ]
   },
   {
     "meta": {
       "type": "EiffelConfidenceLevelModifiedEvent",
-      "version": "1.0.0",
+      "version": "3.0.0",
       "time": 207000,
-      "id": "aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeee16",
+      "id": "aaaaaaaa-bbbb-5ccc-8ddd-eeeeeeeeee16",
       "source": {
         "domainId": "example.domain"
       }
@@ -375,8 +495,65 @@
     "links": [
       {
         "type": "SUBJECT",
-        "target": "aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeee10"
+        "target": "aaaaaaaa-bbbb-5ccc-8ddd-eeeeeeeeee10"
       }
+    ]
+  },
+  {
+    "meta": {
+      "type": "EiffelIssueDefinedEvent",
+      "version": "3.0.0",
+      "time": 900,
+      "id": "aaaaaaaa-bbbb-5ccc-8ddd-eeeeeeeeee17",
+      "source": {
+        "domainId": "example.domain"
+      }
+    },
+    "data": {
+      "type": "WORK_ITEM",
+      "tracker": "JIRA",
+      "id": "JIRA-1234",
+      "uri": "http://jira.company.com/browse/JIRA-1234"
+    },
+    "links": [
+    ]
+  },
+  {
+    "meta": {
+      "type": "EiffelIssueDefinedEvent",
+      "version": "3.0.0",
+      "time": 901,
+      "id": "aaaaaaaa-bbbb-5ccc-8ddd-eeeeeeeeee18",
+      "source": {
+        "domainId": "example.domain"
+      }
+    },
+    "data": {
+      "type": "REQUIREMENT",
+      "tracker": "JIRA",
+      "id": "JIRA-1235",
+      "uri": "http://jira.company.com/browse/JIRA-1235"
+    },
+    "links": [
+    ]
+  },
+  {
+    "meta": {
+      "type": "EiffelIssueDefinedEvent",
+      "version": "3.0.0",
+      "time": 902,
+      "id": "aaaaaaaa-bbbb-5ccc-8ddd-eeeeeeeeee19",
+      "source": {
+        "domainId": "example.domain"
+      }
+    },
+    "data": {
+      "type": "REQUIREMENT",
+      "tracker": "JIRA",
+      "id": "JIRA-1236",
+      "uri": "http://jira.company.com/browse/JIRA-1236"
+    },
+    "links": [
     ]
   }
 ]

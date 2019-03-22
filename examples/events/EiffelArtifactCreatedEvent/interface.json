@@ -1,23 +1,18 @@
 {
   "meta": {
     "type": "EiffelArtifactCreatedEvent",
-    "version": "1.0.0",
+    "version": "3.0.0",
     "time": 1234567890,
     "source": {
-      "domainId": "example.domain"
+      "serializer": "pkg:maven/com.mycompany.pipeline-tools/eiffel-serializer@57"
     },
-    "id": "aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeee0"
+    "id": "aaaaaaaa-bbbb-5ccc-8ddd-eeeeeeeeeee0"
   },
   "data": {
-    "gav": {
-      "groupId": "com.mycompany.myproduct",
-      "artifactId": "my-interface",
-      "version": "1.0.4"
-    },
+    "identity": "pkg:maven/com.mycompany.myproduct/my-interface@1.0.4",
     "fileInformation": [
       {
-        "classifier": "",
-        "extension": "jar"
+        "name": "interface.jar"
       }
     ],
     "buildCommand": "/my/build/command with arguments",
@@ -26,19 +21,19 @@
   "links": [
     {
       "type": "CAUSE",
-      "target": "aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeee1"
+      "target": "aaaaaaaa-bbbb-5ccc-8ddd-eeeeeeeeeee1"
     },
     {
       "type": "PREVIOUS_VERSION",
-      "target": "aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeee2"
+      "target": "aaaaaaaa-bbbb-5ccc-8ddd-eeeeeeeeeee2"
     },
     {
       "type": "COMPOSITION",
-      "target": "aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeee1"
+      "target": "aaaaaaaa-bbbb-5ccc-8ddd-eeeeeeeeeee1"
     },
     {
       "type": "ENVIRONMENT",
-      "target": "aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeee3"
+      "target": "aaaaaaaa-bbbb-5ccc-8ddd-eeeeeeeeeee3"
     }
   ]
 }

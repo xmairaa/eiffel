@@ -2,15 +2,20 @@
   {
     "meta": {
       "type": "EiffelSourceChangeSubmittedEvent",
-      "version": "1.0.0",
+      "version": "3.0.0",
       "time": 1000,
-      "id": "aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeee0",
+      "id": "aaaaaaaa-bbbb-5ccc-8ddd-eeeeeeeeeee0",
       "source": {
         "domainId": "example.domain"
       }
     },
     "data": {
-      "placeholder": "The syntax of this event has not yet been defined."
+      "svnIdentifier": {
+        "revision": 42,
+        "directory": "trunk",
+        "repoName": "Mainline",
+        "repoUri": "svn://repohost/mainline"
+      }
     },
     "links": [
     ]
@@ -18,87 +23,89 @@
   {
     "meta": {
       "type": "EiffelSourceChangeSubmittedEvent",
-      "version": "1.0.0",
+      "version": "3.0.0",
       "time": 101000,
-      "id": "aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeee1",
+      "id": "aaaaaaaa-bbbb-5ccc-8ddd-eeeeeeeeeee1",
       "source": {
         "domainId": "example.domain"
       }
     },
     "data": {
-      "placeholder": "The syntax of this event has not yet been defined."
+      "svnIdentifier": {
+        "revision": 43,
+        "directory": "trunk",
+        "repoName": "Mainline",
+        "repoUri": "svn://repohost/mainline"
+      }
     },
     "links": [
       {
         "type": "PREVIOUS_VERSION",
-        "target": "aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeee0"
+        "target": "aaaaaaaa-bbbb-5ccc-8ddd-eeeeeeeeeee0"
       }
     ]
   },
   {
     "meta": {
       "type": "EiffelCompositionDefinedEvent",
-      "version": "1.0.0",
+      "version": "3.0.0",
       "time": 2000,
-      "id": "aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeee2",
+      "id": "aaaaaaaa-bbbb-5ccc-8ddd-eeeeeeeeeee2",
       "source": {
         "domainId": "example.domain"
       }
     },
     "data": {
-      "placeholder": "The syntax of this event has not yet been defined."
+      "name": "My Composition",
+      "version": "1.0"
     },
     "links": [
       {
         "type": "ELEMENT",
-        "target": "aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeee0"
+        "target": "aaaaaaaa-bbbb-5ccc-8ddd-eeeeeeeeeee0"
       }
     ]
   },
   {
     "meta": {
       "type": "EiffelCompositionDefinedEvent",
-      "version": "1.0.0",
+      "version": "3.0.0",
       "time": 102000,
-      "id": "aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeee3",
+      "id": "aaaaaaaa-bbbb-5ccc-8ddd-eeeeeeeeeee3",
       "source": {
         "domainId": "example.domain"
       }
     },
     "data": {
-      "placeholder": "The syntax of this event has not yet been defined."
+      "name": "My Composition",
+      "version": "1.1"
     },
     "links": [
       {
         "type": "ELEMENT",
-        "target": "aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeee1"
+        "target": "aaaaaaaa-bbbb-5ccc-8ddd-eeeeeeeeeee1"
       },
       {
         "type": "PREVIOUS_VERSION",
-        "target": "aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeee2"
+        "target": "aaaaaaaa-bbbb-5ccc-8ddd-eeeeeeeeeee2"
       }
     ]
   },
   {
     "meta": {
       "type": "EiffelArtifactCreatedEvent",
-      "version": "1.0.0",
+      "version": "3.0.0",
       "time": 3000,
-      "id": "aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeee4",
+      "id": "aaaaaaaa-bbbb-5ccc-8ddd-eeeeeeeeeee4",
       "source": {
         "domainId": "example.domain"
       }
     },
     "data": {
-      "gav": {
-        "groupId": "com.mycompany.myproduct",
-        "artifactId": "component-a",
-        "version": "1.0.0"
-      },
+      "identity": "pkg:maven/com.mycompany.myproduct/component-a@1.0.0",
       "fileInformation": [
         {
-          "classifier": "",
-          "extension": "jar"
+          "name": "component-a.jar"
         }
       ],
       "buildCommand": "/my/build/command with arguments"
@@ -106,30 +113,25 @@
     "links": [
       {
         "type": "COMPOSITION",
-        "target": "aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeee2"
+        "target": "aaaaaaaa-bbbb-5ccc-8ddd-eeeeeeeeeee2"
       }
     ]
   },
   {
     "meta": {
       "type": "EiffelArtifactCreatedEvent",
-      "version": "1.0.0",
+      "version": "3.0.0",
       "time": 4000,
-      "id": "aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeee5",
+      "id": "aaaaaaaa-bbbb-5ccc-8ddd-eeeeeeeeeee5",
       "source": {
         "domainId": "example.domain"
       }
     },
     "data": {
-      "gav": {
-        "groupId": "com.mycompany.myproduct",
-        "artifactId": "component-b",
-        "version": "1.0.0"
-      },
+      "identity": "pkg:maven/com.mycompany.myproduct/component-b@1.0.0",
       "fileInformation": [
         {
-          "classifier": "",
-          "extension": "jar"
+          "name": "component-b.jar"
         }
       ],
       "buildCommand": "/my/build/command with arguments"
@@ -137,30 +139,25 @@
     "links": [
       {
         "type": "COMPOSITION",
-        "target": "aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeee2"
+        "target": "aaaaaaaa-bbbb-5ccc-8ddd-eeeeeeeeeee2"
       }
     ]
   },
   {
     "meta": {
       "type": "EiffelArtifactCreatedEvent",
-      "version": "1.0.0",
+      "version": "3.0.0",
       "time": 5000,
-      "id": "aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeee6",
+      "id": "aaaaaaaa-bbbb-5ccc-8ddd-eeeeeeeeeee6",
       "source": {
         "domainId": "example.domain"
       }
     },
     "data": {
-      "gav": {
-        "groupId": "com.mycompany.myproduct",
-        "artifactId": "component-c",
-        "version": "1.0.0"
-      },
+      "identity": "pkg:maven/com.mycompany.myproduct/component-c@1.0.0",
       "fileInformation": [
         {
-          "classifier": "",
-          "extension": "jar"
+          "name": "component-c.jar"
         }
       ],
       "buildCommand": "/my/build/command with arguments"
@@ -168,30 +165,25 @@
     "links": [
       {
         "type": "COMPOSITION",
-        "target": "aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeee2"
+        "target": "aaaaaaaa-bbbb-5ccc-8ddd-eeeeeeeeeee2"
       }
     ]
   },
   {
     "meta": {
       "type": "EiffelArtifactCreatedEvent",
-      "version": "1.0.0",
+      "version": "3.0.0",
       "time": 6000,
-      "id": "aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeee7",
+      "id": "aaaaaaaa-bbbb-5ccc-8ddd-eeeeeeeeeee7",
       "source": {
         "domainId": "example.domain"
       }
     },
     "data": {
-      "gav": {
-        "groupId": "com.mycompany.myproduct",
-        "artifactId": "component-d",
-        "version": "1.0.0"
-      },
+      "identity": "pkg:maven/com.mycompany.myproduct/component-d@1.0.0",
       "fileInformation": [
         {
-          "classifier": "",
-          "extension": "jar"
+          "name": "component-d.jar"
         }
       ],
       "buildCommand": "/my/build/command with arguments"
@@ -199,30 +191,25 @@
     "links": [
       {
         "type": "COMPOSITION",
-        "target": "aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeee2"
+        "target": "aaaaaaaa-bbbb-5ccc-8ddd-eeeeeeeeeee2"
       }
     ]
   },
   {
     "meta": {
       "type": "EiffelArtifactCreatedEvent",
-      "version": "1.0.0",
+      "version": "3.0.0",
       "time": 7000,
-      "id": "aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeee8",
+      "id": "aaaaaaaa-bbbb-5ccc-8ddd-eeeeeeeeeee8",
       "source": {
         "domainId": "example.domain"
       }
     },
     "data": {
-      "gav": {
-        "groupId": "com.mycompany.myproduct",
-        "artifactId": "component-e",
-        "version": "1.0.0"
-      },
+      "identity": "pkg:maven/com.mycompany.myproduct/component-e@1.0.0",
       "fileInformation": [
         {
-          "classifier": "",
-          "extension": "jar"
+          "name": "component-e.jar"
         }
       ],
       "buildCommand": "/my/build/command with arguments"
@@ -230,30 +217,25 @@
     "links": [
       {
         "type": "COMPOSITION",
-        "target": "aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeee2"
+        "target": "aaaaaaaa-bbbb-5ccc-8ddd-eeeeeeeeeee2"
       }
     ]
   },
   {
     "meta": {
       "type": "EiffelArtifactCreatedEvent",
-      "version": "1.0.0",
+      "version": "3.0.0",
       "time": 103000,
-      "id": "aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeee9",
+      "id": "aaaaaaaa-bbbb-5ccc-8ddd-eeeeeeeeeee9",
       "source": {
         "domainId": "example.domain"
       }
     },
     "data": {
-      "gav": {
-        "groupId": "com.mycompany.myproduct",
-        "artifactId": "component-a",
-        "version": "1.0.1"
-      },
+      "identity": "pkg:maven/com.mycompany.myproduct/component-a@1.0.1",
       "fileInformation": [
         {
-          "classifier": "",
-          "extension": "jar"
+          "name": "component-a.jar"
         }
       ],
       "buildCommand": "/my/build/command with arguments"
@@ -261,34 +243,29 @@
     "links": [
       {
         "type": "COMPOSITION",
-        "target": "aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeee3"
+        "target": "aaaaaaaa-bbbb-5ccc-8ddd-eeeeeeeeeee3"
       },
       {
         "type": "PREVIOUS_VERSION",
-        "target": "aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeee4"
+        "target": "aaaaaaaa-bbbb-5ccc-8ddd-eeeeeeeeeee4"
       }
     ]
   },
   {
     "meta": {
       "type": "EiffelArtifactCreatedEvent",
-      "version": "1.0.0",
+      "version": "3.0.0",
       "time": 104000,
-      "id": "aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeee10",
+      "id": "aaaaaaaa-bbbb-5ccc-8ddd-eeeeeeeeee10",
       "source": {
         "domainId": "example.domain"
       }
     },
     "data": {
-      "gav": {
-        "groupId": "com.mycompany.myproduct",
-        "artifactId": "component-e",
-        "version": "1.0.1"
-      },
+      "identity": "pkg:maven/com.mycompany.myproduct/component-e@1.0.1",
       "fileInformation": [
         {
-          "classifier": "",
-          "extension": "jar"
+          "name": "component-e.jar"
         }
       ],
       "buildCommand": "/my/build/command with arguments"
@@ -296,87 +273,158 @@
     "links": [
       {
         "type": "COMPOSITION",
-        "target": "aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeee3"
+        "target": "aaaaaaaa-bbbb-5ccc-8ddd-eeeeeeeeeee3"
       },
       {
         "type": "PREVIOUS_VERSION",
-        "target": "aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeee8"
+        "target": "aaaaaaaa-bbbb-5ccc-8ddd-eeeeeeeeeee8"
       }
     ]
   },
   {
     "meta": {
       "type": "EiffelCompositionDefinedEvent",
-      "version": "1.0.0",
+      "version": "3.0.0",
       "time": 8000,
-      "id": "aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeee11",
+      "id": "aaaaaaaa-bbbb-5ccc-8ddd-eeeeeeeeee11",
       "source": {
         "domainId": "example.domain"
       }
     },
     "data": {
-      "placeholder": "The syntax of this event has not yet been defined."
+      "name": "Other Composition",
+      "version": "A"
     },
     "links": [
       {
         "type": "ELEMENT",
-        "target": "aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeee4"
+        "target": "aaaaaaaa-bbbb-5ccc-8ddd-eeeeeeeeeee4"
       },
       {
         "type": "ELEMENT",
-        "target": "aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeee5"
+        "target": "aaaaaaaa-bbbb-5ccc-8ddd-eeeeeeeeeee5"
       },
       {
         "type": "ELEMENT",
-        "target": "aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeee6"
+        "target": "aaaaaaaa-bbbb-5ccc-8ddd-eeeeeeeeeee6"
       },
       {
         "type": "ELEMENT",
-        "target": "aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeee7"
+        "target": "aaaaaaaa-bbbb-5ccc-8ddd-eeeeeeeeeee7"
       },
       {
         "type": "ELEMENT",
-        "target": "aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeee8"
+        "target": "aaaaaaaa-bbbb-5ccc-8ddd-eeeeeeeeeee8"
       }
     ]
   },
   {
     "meta": {
       "type": "EiffelCompositionDefinedEvent",
-      "version": "1.0.0",
+      "version": "3.0.0",
       "time": 105000,
-      "id": "aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeee12",
+      "id": "aaaaaaaa-bbbb-5ccc-8ddd-eeeeeeeeee12",
       "source": {
         "domainId": "example.domain"
       }
     },
     "data": {
-      "placeholder": "The syntax of this event has not yet been defined."
+      "name": "Other Composition",
+      "version": "B"
     },
     "links": [
       {
         "type": "ELEMENT",
-        "target": "aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeee9"
+        "target": "aaaaaaaa-bbbb-5ccc-8ddd-eeeeeeeeeee9"
       },
       {
         "type": "ELEMENT",
-        "target": "aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeee5"
+        "target": "aaaaaaaa-bbbb-5ccc-8ddd-eeeeeeeeee13"
       },
       {
         "type": "ELEMENT",
-        "target": "aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeee6"
+        "target": "aaaaaaaa-bbbb-5ccc-8ddd-eeeeeeeeee14"
       },
       {
         "type": "ELEMENT",
-        "target": "aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeee7"
+        "target": "aaaaaaaa-bbbb-5ccc-8ddd-eeeeeeeeee15"
       },
       {
         "type": "ELEMENT",
-        "target": "aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeee10"
+        "target": "aaaaaaaa-bbbb-5ccc-8ddd-eeeeeeeeee10"
       },
       {
         "type": "PREVIOUS_VERSION",
-        "target": "aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeee11"
+        "target": "aaaaaaaa-bbbb-5ccc-8ddd-eeeeeeeeee11"
+      }
+    ]
+  },
+  {
+    "meta": {
+      "type": "EiffelArtifactReusedEvent",
+      "version": "3.0.0",
+      "time": 102100,
+      "id": "aaaaaaaa-bbbb-5ccc-8ddd-eeeeeeeeee13",
+      "source": {
+        "domainId": "example.domain"
+      }
+    },
+    "data": {
+    },
+    "links": [
+      {
+        "type": "COMPOSITION",
+        "target": "aaaaaaaa-bbbb-5ccc-8ddd-eeeeeeeeeee3"
+      },
+      {
+        "type": "REUSED_ARTIFACT",
+        "target": "aaaaaaaa-bbbb-5ccc-8ddd-eeeeeeeeeee5"
+      }
+    ]
+  },
+  {
+    "meta": {
+      "type": "EiffelArtifactReusedEvent",
+      "version": "3.0.0",
+      "time": 102200,
+      "id": "aaaaaaaa-bbbb-5ccc-8ddd-eeeeeeeeee14",
+      "source": {
+        "domainId": "example.domain"
+      }
+    },
+    "data": {
+    },
+    "links": [
+      {
+        "type": "COMPOSITION",
+        "target": "aaaaaaaa-bbbb-5ccc-8ddd-eeeeeeeeeee3"
+      },
+      {
+        "type": "REUSED_ARTIFACT",
+        "target": "aaaaaaaa-bbbb-5ccc-8ddd-eeeeeeeeeee6"
+      }
+    ]
+  },
+  {
+    "meta": {
+      "type": "EiffelArtifactReusedEvent",
+      "version": "3.0.0",
+      "time": 102300,
+      "id": "aaaaaaaa-bbbb-5ccc-8ddd-eeeeeeeeee15",
+      "source": {
+        "domainId": "example.domain"
+      }
+    },
+    "data": {
+    },
+    "links": [
+      {
+        "type": "COMPOSITION",
+        "target": "aaaaaaaa-bbbb-5ccc-8ddd-eeeeeeeeeee3"
+      },
+      {
+        "type": "REUSED_ARTIFACT",
+        "target": "aaaaaaaa-bbbb-5ccc-8ddd-eeeeeeeeeee7"
       }
     ]
   }

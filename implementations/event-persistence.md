@@ -1,3 +1,0 @@
-# Event Persistence Implementations
-
-To be added...

@@ -1,3 +1,20 @@
+<!---
+   Copyright 2017 Ericsson AB.
+   For a full list of individual contributors, please see the commit history.
+
+   Licensed under the Apache License, Version 2.0 (the "License");
+   you may not use this file except in compliance with the License.
+   You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+   Unless required by applicable law or agreed to in writing, software
+   distributed under the License is distributed on an "AS IS" BASIS,
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   See the License for the specific language governing permissions and
+   limitations under the License.
+--->
+
 # Introduction
 
 This page provides an introduction to Eiffel: what is it, why is it and who is it for?
@@ -25,7 +42,7 @@ To use Eiffel you need three things: the Eiffel vocabulary, messaging infrastruc
 
 The Eiffel vocabulary can be adopted incrementally - which events you use is up to you, but _how_ they are used is heavily standardized to ensure interoperability and alignment on proven practices. 
 
-There are several valid out-of-the-box solutions for event transport and routing infrastructure, depending on your needs and preferences. Examples include [RabbitMQ](https://www.rabbitmq.com/), [Kafka](http://kafka.apache.org/), [NATS](http://nats.io/) and more.
+There are several valid out-of-the-box solutions for event transport and routing infrastructure, depending on your needs and preferences. Examples include [RabbitMQ](https://www.rabbitmq.com/), [Kafka](http://kafka.apache.org/), [NATS](http://nats.io/) and more. When choosing infrastructure, it is important to understand the implications of the different types of guarantees these solutions can offer. While some provide durable queues and delivery guarantees, others do not, but instead offer higher performance. It is important to consider one's requirements and choose the appropriate solution for event transport and routing accordingly; to maximize reliability and traceability capabilities, it is generally recommended to choose a solution with durable queues and delivery guarantees.
 
 Services for Eiffel event handling address a multitude of needs. These services range from very simplistic to highly complex, and just like the Eiffel vocabulary one is free to pick and choose what suits the particular case. The documentation in this repository links such services as they become available, addressing e.g. [event dispatch](../implementations/event-dispatch.md) and [event aggregation and analysis](../implementations/event-aggregation-and-analysis.md).
 

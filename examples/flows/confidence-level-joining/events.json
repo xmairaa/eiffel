@@ -2,15 +2,17 @@
   {
     "meta": {
       "type": "EiffelEnvironmentDefinedEvent",
-      "version": "1.0.0",
+      "version": "3.0.0",
       "time": 1000,
-      "id": "aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeee0",
+      "id": "aaaaaaaa-bbbb-5ccc-8ddd-eeeeeeeeeee0",
       "source": {
         "domainId": "example.domain"
       }
     },
     "data": {
-      "placeholder": "The syntax of this event has not yet been defined."
+      "name": "John's Docker Image",
+      "version": "2.10.3",
+      "image": "johndoe/docker-whale:2.10.3"
     },
     "links": [
     ]
@@ -18,15 +20,15 @@
   {
     "meta": {
       "type": "EiffelCompositionDefinedEvent",
-      "version": "1.0.0",
+      "version": "3.0.0",
       "time": 2000,
-      "id": "aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeee1",
+      "id": "aaaaaaaa-bbbb-5ccc-8ddd-eeeeeeeeeee1",
       "source": {
         "domainId": "example.domain"
       }
     },
     "data": {
-      "placeholder": "The syntax of this event has not yet been defined."
+      "name": "My composition"
     },
     "links": [
     ]
@@ -34,48 +36,38 @@
   {
     "meta": {
       "type": "EiffelArtifactCreatedEvent",
-      "version": "1.0.0",
+      "version": "3.0.0",
       "time": 3000,
-      "id": "aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeee2",
+      "id": "aaaaaaaa-bbbb-5ccc-8ddd-eeeeeeeeeee2",
       "source": {
         "domainId": "example.domain"
       }
     },
     "data": {
-      "gav": {
-        "groupId": "com.mycompany.myproduct",
-        "artifactId": "artifact-name",
-        "version": "2.1.7"
-      },
-      "fileInformation": [
-        {
-          "classifier": "",
-          "extension": "jar"
-        }
-      ],
+      "identity": "pkg:maven/com.mycompany.myproduct/artifact-name@2.1.7",
       "buildCommand": "/my/build/command with arguments"
     },
     "links": [
       {
         "type": "CAUSE",
-        "target": "aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeee1"
+        "target": "aaaaaaaa-bbbb-5ccc-8ddd-eeeeeeeeeee1"
       },
       {
         "type": "COMPOSITION",
-        "target": "aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeee1"
+        "target": "aaaaaaaa-bbbb-5ccc-8ddd-eeeeeeeeeee1"
       },
       {
         "type": "ENVIRONMENT",
-        "target": "aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeee0"
+        "target": "aaaaaaaa-bbbb-5ccc-8ddd-eeeeeeeeeee0"
       }
     ]
   },
   {
     "meta": {
       "type": "EiffelArtifactPublishedEvent",
-      "version": "1.0.0",
+      "version": "3.0.0",
       "time": 4000,
-      "id": "aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeee3",
+      "id": "aaaaaaaa-bbbb-5ccc-8ddd-eeeeeeeeeee3",
       "source": {
         "domainId": "example.domain"
       }
@@ -91,20 +83,20 @@
     "links": [
       {
         "type": "CAUSE",
-        "target": "aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeee2"
+        "target": "aaaaaaaa-bbbb-5ccc-8ddd-eeeeeeeeeee2"
       },
       {
         "type": "ARTIFACT",
-        "target": "aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeee2"
+        "target": "aaaaaaaa-bbbb-5ccc-8ddd-eeeeeeeeeee2"
       }
     ]
   },
   {
     "meta": {
       "type": "EiffelActivityTriggeredEvent",
-      "version": "1.0.0",
+      "version": "3.0.0",
       "time": 5000,
-      "id": "aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeee4",
+      "id": "aaaaaaaa-bbbb-5ccc-8ddd-eeeeeeeeeee4",
       "source": {
         "domainId": "example.domain"
       }
@@ -122,16 +114,16 @@
     "links": [
       {
         "type": "CAUSE",
-        "target": "aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeee3"
+        "target": "aaaaaaaa-bbbb-5ccc-8ddd-eeeeeeeeeee3"
       }
     ]
   },
   {
     "meta": {
       "type": "EiffelActivityTriggeredEvent",
-      "version": "1.0.0",
+      "version": "3.0.0",
       "time": 6000,
-      "id": "aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeee5",
+      "id": "aaaaaaaa-bbbb-5ccc-8ddd-eeeeeeeeeee5",
       "source": {
         "domainId": "example.domain"
       }
@@ -149,16 +141,16 @@
     "links": [
       {
         "type": "CAUSE",
-        "target": "aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeee3"
+        "target": "aaaaaaaa-bbbb-5ccc-8ddd-eeeeeeeeeee3"
       }
     ]
   },
   {
     "meta": {
       "type": "EiffelActivityStartedEvent",
-      "version": "1.0.0",
+      "version": "3.0.0",
       "time": 7000,
-      "id": "aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeee6",
+      "id": "aaaaaaaa-bbbb-5ccc-8ddd-eeeeeeeeeee6",
       "source": {
         "domainId": "example.domain"
       }
@@ -168,16 +160,16 @@
     "links": [
       {
         "type": "ACTIVITY_EXECUTION",
-        "target": "aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeee4"
+        "target": "aaaaaaaa-bbbb-5ccc-8ddd-eeeeeeeeeee4"
       }
     ]
   },
   {
     "meta": {
       "type": "EiffelActivityStartedEvent",
-      "version": "1.0.0",
+      "version": "3.0.0",
       "time": 8000,
-      "id": "aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeee7",
+      "id": "aaaaaaaa-bbbb-5ccc-8ddd-eeeeeeeeeee7",
       "source": {
         "domainId": "example.domain"
       }
@@ -187,192 +179,318 @@
     "links": [
       {
         "type": "ACTIVITY_EXECUTION",
-        "target": "aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeee5"
+        "target": "aaaaaaaa-bbbb-5ccc-8ddd-eeeeeeeeeee5"
+      }
+    ]
+  },
+  {
+    "meta": {
+      "type": "EiffelTestCaseTriggeredEvent",
+      "version": "3.0.0",
+      "time": 9000,
+      "id": "aaaaaaaa-bbbb-5ccc-8ddd-eeeeeeeeeea8",
+      "source": {
+        "domainId": "example.domain"
+      }
+    },
+    "data": {
+      "testCase": {
+        "tracker": "My Test Management System",
+        "id": "TC-1234",
+        "uri": "http://tm.company.com/browse/TC-1234"
+      },
+      "executionType": "AUTOMATED"
+    },
+    "links": [
+      {
+        "type": "CONTEXT",
+        "target": "aaaaaaaa-bbbb-5ccc-8ddd-eeeeeeeeeee4"
+      },
+      {
+        "type": "IUT",
+        "target": "aaaaaaaa-bbbb-5ccc-8ddd-eeeeeeeeeee2"
       }
     ]
   },
   {
     "meta": {
       "type": "EiffelTestCaseStartedEvent",
-      "version": "1.0.0",
-      "time": 9000,
-      "id": "aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeee8",
+      "version": "3.0.0",
+      "time": 9001,
+      "id": "aaaaaaaa-bbbb-5ccc-8ddd-eeeeeeeeeee8",
       "source": {
         "domainId": "example.domain"
       }
     },
     "data": {
-      "placeholder": "The syntax of this event has not yet been defined."
+      "executor": "My Test Framework"
+    },
+    "links": [
+      {
+        "type": "TEST_CASE_EXECUTION",
+        "target": "aaaaaaaa-bbbb-5ccc-8ddd-eeeeeeeeeea8"
+      }
+    ]
+  },
+  {
+    "meta": {
+      "type": "EiffelTestCaseTriggeredEvent",
+      "version": "3.0.0",
+      "time": 9000,
+      "id": "aaaaaaaa-bbbb-5ccc-8ddd-eeeeeeeeeea9",
+      "source": {
+        "domainId": "example.domain"
+      }
+    },
+    "data": {
+      "testCase": {
+        "tracker": "My Test Management System",
+        "id": "TC-1235",
+        "uri": "http://tm.company.com/browse/TC-1235"
+      },
+      "executionType": "AUTOMATED"
     },
     "links": [
       {
         "type": "CONTEXT",
-        "target": "aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeee4"
+        "target": "aaaaaaaa-bbbb-5ccc-8ddd-eeeeeeeeeee4"
       },
       {
         "type": "IUT",
-        "target": "aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeee2"
+        "target": "aaaaaaaa-bbbb-5ccc-8ddd-eeeeeeeeeee2"
       }
     ]
   },
   {
     "meta": {
       "type": "EiffelTestCaseStartedEvent",
-      "version": "1.0.0",
-      "time": 9000,
-      "id": "aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeee9",
+      "version": "3.0.0",
+      "time": 9001,
+      "id": "aaaaaaaa-bbbb-5ccc-8ddd-eeeeeeeeeee9",
       "source": {
         "domainId": "example.domain"
       }
     },
     "data": {
-      "placeholder": "The syntax of this event has not yet been defined."
+      "executor": "My Test Framework"
+    },
+    "links": [
+      {
+        "type": "TEST_CASE_EXECUTION",
+        "target": "aaaaaaaa-bbbb-5ccc-8ddd-eeeeeeeeeea9"
+      }
+    ]
+  },
+  {
+    "meta": {
+      "type": "EiffelTestCaseTriggeredEvent",
+      "version": "3.0.0",
+      "time": 9000,
+      "id": "aaaaaaaa-bbbb-5ccc-8ddd-eeeeeeeeea10",
+      "source": {
+        "domainId": "example.domain"
+      }
+    },
+    "data": {
+      "testCase": {
+        "tracker": "My Test Management System",
+        "id": "TC-1236",
+        "uri": "http://tm.company.com/browse/TC-1236"
+      },
+      "executionType": "AUTOMATED"
     },
     "links": [
       {
         "type": "CONTEXT",
-        "target": "aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeee4"
+        "target": "aaaaaaaa-bbbb-5ccc-8ddd-eeeeeeeeeee5"
       },
       {
         "type": "IUT",
-        "target": "aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeee2"
+        "target": "aaaaaaaa-bbbb-5ccc-8ddd-eeeeeeeeeee2"
       }
     ]
   },
   {
     "meta": {
       "type": "EiffelTestCaseStartedEvent",
-      "version": "1.0.0",
-      "time": 9000,
-      "id": "aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeee10",
+      "version": "3.0.0",
+      "time": 9001,
+      "id": "aaaaaaaa-bbbb-5ccc-8ddd-eeeeeeeeee10",
       "source": {
         "domainId": "example.domain"
       }
     },
     "data": {
-      "placeholder": "The syntax of this event has not yet been defined."
+      "executor": "My Test Framework"
+    },
+    "links": [
+      {
+        "type": "TEST_CASE_EXECUTION",
+        "target": "aaaaaaaa-bbbb-5ccc-8ddd-eeeeeeeeea10"
+      }
+    ]
+  },
+  {
+    "meta": {
+      "type": "EiffelTestCaseTriggeredEvent",
+      "version": "3.0.0",
+      "time": 9000,
+      "id": "aaaaaaaa-bbbb-5ccc-8ddd-eeeeeeeeea11",
+      "source": {
+        "domainId": "example.domain"
+      }
+    },
+    "data": {
+      "testCase": {
+        "tracker": "My Test Management System",
+        "id": "TC-1237",
+        "uri": "http://tm.company.com/browse/TC-1237"
+      },
+      "executionType": "AUTOMATED"
     },
     "links": [
       {
         "type": "CONTEXT",
-        "target": "aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeee5"
+        "target": "aaaaaaaa-bbbb-5ccc-8ddd-eeeeeeeeeee5"
       },
       {
         "type": "IUT",
-        "target": "aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeee2"
+        "target": "aaaaaaaa-bbbb-5ccc-8ddd-eeeeeeeeeee2"
       }
     ]
   },
   {
     "meta": {
       "type": "EiffelTestCaseStartedEvent",
-      "version": "1.0.0",
-      "time": 9000,
-      "id": "aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeee11",
+      "version": "3.0.0",
+      "time": 9001,
+      "id": "aaaaaaaa-bbbb-5ccc-8ddd-eeeeeeeeee11",
       "source": {
         "domainId": "example.domain"
       }
     },
     "data": {
-      "placeholder": "The syntax of this event has not yet been defined."
+      "executor": "My Test Framework"
     },
     "links": [
       {
-        "type": "CONTEXT",
-        "target": "aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeee5"
-      },
-      {
-        "type": "IUT",
-        "target": "aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeee2"
+        "type": "TEST_CASE_EXECUTION",
+        "target": "aaaaaaaa-bbbb-5ccc-8ddd-eeeeeeeeea11"
       }
     ]
   },
   {
     "meta": {
       "type": "EiffelTestCaseFinishedEvent",
-      "version": "1.0.0",
+      "version": "3.0.0",
       "time": 19000,
-      "id": "aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeee12",
+      "id": "aaaaaaaa-bbbb-5ccc-8ddd-eeeeeeeeee12",
       "source": {
         "domainId": "example.domain"
       }
     },
     "data": {
-      "placeholder": "The syntax of this event has not yet been defined."
+      "outcome": {
+        "verdict": "PASSED",
+        "conclusion": "SUCCESSFUL",
+        "description": "There were no warnings."
+      },
+      "persistentLogs": [
+        {
+         "name": "firstLog",
+         "uri": "http://myHost.com/firstLog"
+        },
+        {
+         "name": "otherLog",
+         "uri": "isbn:0-486-27557-4"
+        }
+      ]
     },
     "links": [
       {
         "type": "TEST_CASE_EXECUTION",
-        "target": "aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeee8"
+        "target": "aaaaaaaa-bbbb-5ccc-8ddd-eeeeeeeeeea8"
       }
     ]
   },
   {
     "meta": {
       "type": "EiffelTestCaseFinishedEvent",
-      "version": "1.0.0",
+      "version": "3.0.0",
       "time": 14000,
-      "id": "aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeee13",
+      "id": "aaaaaaaa-bbbb-5ccc-8ddd-eeeeeeeeee13",
       "source": {
         "domainId": "example.domain"
       }
     },
     "data": {
-      "placeholder": "The syntax of this event has not yet been defined."
+      "outcome": {
+        "verdict": "PASSED",
+        "conclusion": "SUCCESSFUL",
+        "description": "System crashed, but recovered as expected."
+      },
+      "persistentLogs": [
+      ]
     },
     "links": [
       {
         "type": "TEST_CASE_EXECUTION",
-        "target": "aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeee9"
+        "target": "aaaaaaaa-bbbb-5ccc-8ddd-eeeeeeeeeea9"
       }
     ]
   },
   {
     "meta": {
       "type": "EiffelTestCaseFinishedEvent",
-      "version": "1.0.0",
+      "version": "3.0.0",
       "time": 16000,
-      "id": "aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeee14",
+      "id": "aaaaaaaa-bbbb-5ccc-8ddd-eeeeeeeeee14",
       "source": {
         "domainId": "example.domain"
       }
     },
     "data": {
-      "placeholder": "The syntax of this event has not yet been defined."
+      "outcome": {
+        "verdict": "PASSED",
+        "conclusion": "SUCCESSFUL"
+      }
     },
     "links": [
       {
         "type": "TEST_CASE_EXECUTION",
-        "target": "aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeee10"
+        "target": "aaaaaaaa-bbbb-5ccc-8ddd-eeeeeeeeea10"
       }
     ]
   },
   {
     "meta": {
       "type": "EiffelTestCaseFinishedEvent",
-      "version": "1.0.0",
+      "version": "3.0.0",
       "time": 15000,
-      "id": "aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeee15",
+      "id": "aaaaaaaa-bbbb-5ccc-8ddd-eeeeeeeeee15",
       "source": {
         "domainId": "example.domain"
       }
     },
     "data": {
-      "placeholder": "The syntax of this event has not yet been defined."
+      "outcome": {
+        "verdict": "PASSED",
+        "conclusion": "SUCCESSFUL"
+      }
     },
     "links": [
       {
         "type": "TEST_CASE_EXECUTION",
-        "target": "aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeee10"
+        "target": "aaaaaaaa-bbbb-5ccc-8ddd-eeeeeeeeea10"
       }
     ]
   },
   {
     "meta": {
       "type": "EiffelActivityFinishedEvent",
-      "version": "1.0.0",
+      "version": "3.0.0",
       "time": 20000,
-      "id": "aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeee16",
+      "id": "aaaaaaaa-bbbb-5ccc-8ddd-eeeeeeeeee16",
       "source": {
         "domainId": "example.domain"
       }
@@ -385,16 +503,16 @@
     "links": [
       {
         "type": "ACTIVITY_EXECUTION",
-        "target": "aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeee4"
+        "target": "aaaaaaaa-bbbb-5ccc-8ddd-eeeeeeeeeee4"
       }
     ]
   },
   {
     "meta": {
       "type": "EiffelActivityFinishedEvent",
-      "version": "1.0.0",
+      "version": "3.0.0",
       "time": 20000,
-      "id": "aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeee17",
+      "id": "aaaaaaaa-bbbb-5ccc-8ddd-eeeeeeeeee17",
       "source": {
         "domainId": "example.domain"
       }
@@ -407,16 +525,16 @@
     "links": [
       {
         "type": "ACTIVITY_EXECUTION",
-        "target": "aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeee5"
+        "target": "aaaaaaaa-bbbb-5ccc-8ddd-eeeeeeeeeee5"
       }
     ]
   },
   {
     "meta": {
       "type": "EiffelConfidenceLevelModifiedEvent",
-      "version": "1.0.0",
+      "version": "3.0.0",
       "time": 21000,
-      "id": "aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeee18",
+      "id": "aaaaaaaa-bbbb-5ccc-8ddd-eeeeeeeeee18",
       "source": {
         "domainId": "example.domain"
       }
@@ -431,23 +549,23 @@
     "links": [
       {
         "type": "CAUSE",
-        "target": "aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeee13"
+        "target": "aaaaaaaa-bbbb-5ccc-8ddd-eeeeeeeeee13"
       },
       {
         "type": "CAUSE",
-        "target": "aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeee14"
+        "target": "aaaaaaaa-bbbb-5ccc-8ddd-eeeeeeeeee14"
       },
       {
         "type": "CAUSE",
-        "target": "aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeee15"
+        "target": "aaaaaaaa-bbbb-5ccc-8ddd-eeeeeeeeee15"
       },
       {
         "type": "CAUSE",
-        "target": "aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeee16"
+        "target": "aaaaaaaa-bbbb-5ccc-8ddd-eeeeeeeeee16"
       },
       {
         "type": "SUBJECT",
-        "target": "aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeee2"
+        "target": "aaaaaaaa-bbbb-5ccc-8ddd-eeeeeeeeeee2"
       }
     ]
   }

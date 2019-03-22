@@ -1,19 +1,39 @@
+<!---
+   Copyright 2017 Ericsson AB.
+   For a full list of individual contributors, please see the commit history.
+
+   Licensed under the Apache License, Version 2.0 (the "License");
+   you may not use this file except in compliance with the License.
+   You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+   Unless required by applicable law or agreed to in writing, software
+   distributed under the License is distributed on an "AS IS" BASIS,
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   See the License for the specific language governing permissions and
+   limitations under the License.
+--->
+
 # Delivery Interface Example
 Eiffel messaging can favorably be used to implement software delivery interfaces between products and organizations. This is typically achieved by a system placing requirements on the events its constituent parts must use to communicate that they offer a new candidate for integration, and then driving that integration by reacting to those events. The Eiffel vocabulary offers considerable freedom in the level of detail of such interfaces - as always, an important principle is freedom in _what_ you communicate, but not in _how_ you communicate it. Consequently what is presented here is an example of the event usage a system may require from its constituent parts in order to ensure a satisfactory level of traceability; actual implementations may require more or less, but the essential building blocks are the same.
 
 ## Introduction
 A prime concern in designing delivery interfaces is to ensure traceability across products, organizations and enterprises. From a traceability point of view the links of particular interest are typically content and quality related ones: what does this artifact contain, what has changed, has it been tested etc. Consequently this example focuses on those events and links; all causality links and activity events have been excluded. This does not mean that no such events and links may be used, however, but merely that they are not a required part of the delivery interface in this particular example.
 
-In this example the [EiffelConfidenceLevelModifiedEvents](../eiffel-vocabulary/EiffelConfidenceLevelModifiedEvent.md) __CLM1__ and __CLM2__ are used to signal that a new candidate is considered good enough to be integrated (__ArtC1__ and __ArtC2__), while the remaining events provide context and meta-data. 
+In this example the [EiffelConfidenceLevelModifiedEvents](../eiffel-vocabulary/EiffelConfidenceLevelModifiedEvent.md) __CLM1__ and __CLM2__ are used to signal that a new candidate is considered good enough to be integrated (__ArtC1__ and __ArtC2__), while the remaining events provide context and meta-data.
 
 A JSON array of all events used in this example can be found [here](../examples/flows/delivery-interface/events.json).
 
 ## Event Graph
-![alt text](./delivery-interface.png "Event Graph of Delivery Interface Example")
+![alt text](./delivery-interface.svg "Event Graph of Delivery Interface Example")
 
 ## Event-by-Event Explanation
+### ID1, ID2, ID3
+The [EiffelIssueDefinedEvents](../eiffel-vocabulary/EiffelIssueDefinedEvent.md) represent issues of varies types (in this case, REQUIREMENT and WORK_ITEM) which other events may reference to document why a certain action has been taken.
+
 ### SCC1, SCC2, SCC3, SCS1, SCS2, SCS3
-The [EiffelSourceChangeCreatedEvents](../eiffel-vocabulary/EiffelSourceChangeCreatedEvent.md) declare that changes have been made and describe what they entail, by referencing work items, requirements et cetera. This does not mean mean that the change has been merged onto the project mainline (or other relevant branch) - this is instead declared by The [EiffelSourceChangeSubmittedEvent](../eiffel-vocabulary/EiffelSourceChangeSubmittedEvent.md). The distinction between the two is important when working with review processes, private repositories and/or pull requests. If none of that is applicable, the two events are simply sent at once.
+The [EiffelSourceChangeCreatedEvents](../eiffel-vocabulary/EiffelSourceChangeCreatedEvent.md) declare that changes have been made and link to relevant [EiffelIssueDefinedEvents](../eiffel-vocabulary/EiffelIssueDefinedEvent.md). This does not mean mean that the change has been merged onto the project mainline (or other relevant branch) - this is instead declared by The [EiffelSourceChangeSubmittedEvent](../eiffel-vocabulary/EiffelSourceChangeSubmittedEvent.md). The distinction between the two is important when working with review processes, private repositories and/or pull requests. If none of that is applicable, the two events are simply sent at once.
 
 The structure of events shown in this example represents a common development branch, where changes are represented by __SCS1__, SCS2__ and __SCS3__. Each of these submitted changes references a EiffelSourceChangeCreatedEvent via __CHANGE__ links, and also points to the latest previously submitted version(s). This establishes an unbroken chain of source revisions along with a record of the process leading up to that submission.
 

@@ -1,3 +1,20 @@
+<!---
+   Copyright 2017 Ericsson AB.
+   For a full list of individual contributors, please see the commit history.
+
+   Licensed under the Apache License, Version 2.0 (the "License");
+   you may not use this file except in compliance with the License.
+   You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+   Unless required by applicable law or agreed to in writing, software
+   distributed under the License is distributed on an "AS IS" BASIS,
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   See the License for the specific language governing permissions and
+   limitations under the License.
+--->
+
 # Event Structure
 Eiffel events are represented as JSON objects. These JSON objects contain three required members: __meta__, __data__ and __links__.
 
@@ -14,4 +31,4 @@ __Description:__ This object contains all fields specific to the event type – 
 ## links
 __Type:__ Object  
 __Required:__ Yes  
-__Description:__ This object contains all trace links to other Eiffel events. It is described in detail [here](./the-links-object.md).
+__Description:__ This object contains all types of links to other Eiffel events. Its usage and syntax is described [here](./the-links-object.md), while the full list of optional and required links is described in the documentation of each respective event type..
